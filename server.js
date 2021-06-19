@@ -19,14 +19,18 @@ app.get("/", (req, res) => {
 require("./app/routes/url.routes.js")(app);
 
 // set port, listen for requests
+// // HTTPS
+// https.createServer({
+//     key: fs.readFileSync('key.key'),
+//     cert: fs.readFileSync('cert.crt')
+// }, app)
+//     .listen(port, function () {
+//         console.log(`Server is running on port ${port}.`)
+//     })
 
-https.createServer({
-    key: fs.readFileSync('key.pem'),
-    cert: fs.readFileSync('cert.pem')
-  }, app)
-  .listen(port, function () {
-    console.log(`Server is running on port ${port}.`)
-  })
-// app.listen(port, () => {
-//     console.log(`Server is running on port ${port}.`);
-// });
+// Http
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}.`);
+});
+
+module.exports = app;
