@@ -21,8 +21,8 @@ require("./app/routes/url.routes.js")(app);
 // set port, listen for requests
 
 https.createServer({
-    key: fs.readFileSync('server.key'),
-    cert: fs.readFileSync('server.cert')
+    key: fs.readFileSync('key.pem'),
+    cert: fs.readFileSync('cert.pem')
   }, app)
   .listen(port, function () {
     console.log(`Server is running on port ${port}.`)
