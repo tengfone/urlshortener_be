@@ -35,13 +35,14 @@ chmod +x start.sh
 sudo ./start.sh
 ```
 
-Local:  
+The whole process will take about 3 minutes. Once completed, visit ```AWS_IP_ADDRESS:3001``` on your web browser and you will see a ```message:welcome``` indicating everything is working.  
+
+## Local:  
 Have not tested this locally.
 
 Please ensure that you have a ```.env``` file located at the root directory that consist of the following params:
 
 ```
-
 HOST=YOURDBHOSTURL
 
 USER=YOURDBUSER
@@ -51,7 +52,6 @@ PASSWORD=YOURDBPASSWORD
 DB=YOURDBNAME
 
 PORT=3306
-
 ```
 
 Then you can ```node server.js``` to start the backend server.
