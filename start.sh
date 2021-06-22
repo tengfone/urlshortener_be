@@ -8,9 +8,6 @@ sudo apt update
 
 sudo apt install mysql-server -y
 
-git clone https://github.com/tengfone/urlshortener_be
-cd urlshortener_be
-
 sudo cp -f ./script/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
 
 sudo systemctl restart mysql
