@@ -30,7 +30,9 @@ git clone https://github.com/tengfone/urlshortener_be
 
 cd urlshortener_be
 
-sudo start.sh
+chmod +x start.sh
+
+sudo ./start.sh
 ```
 
 Local:  
