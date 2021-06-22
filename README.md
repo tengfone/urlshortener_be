@@ -5,17 +5,36 @@ For Full Documentation, Please refer [here](https://github.com/tengfone/urlshort
 
 ### Backend
 
-Either on local or cloud
+Either launch on Cloud or Local. As this project is completed developed on the cloud, please follow the cloud instructions on setting up.
 
+## Cloud:  
+
+Prerequisite:  
+- AWS Instance  
+
+Steps:
+
+Launch an EC2 Instance ```Ubuntu Server 20.04 LTS (HVM), SSD Volume Type - ami-09e67e426f25ce0d7 (64-bit x86)``` (Tested on T2.Small)  
+
+Change Security Group in AWS Security Wizard to open all TCP Port to anywhere (Please change accordingly to your default params - MySQL port and your IP SSH address)
+
+SSH into your AWS server by  
+```
+ssh -i <SSH_KEY_PATH> ubuntu@<YOUR_EC2_PUBLIC_IP>
+```
+
+Clone repo and run bash script (Please edit required passwords in bash script):
 ```
 
 git clone https://github.com/tengfone/urlshortener_be
 
 cd urlshortener_be
 
-npm install
-
+sudo start.sh
 ```
+
+Local:  
+Have not tested this locally.
 
 Please ensure that you have a ```.env``` file located at the root directory that consist of the following params:
 
@@ -34,6 +53,8 @@ PORT=3306
 ```
 
 Then you can ```node server.js``` to start the backend server.
+
+Please note that you are required to have MySQL server v8 to be installed on the local computer.
 
   
 
