@@ -6,7 +6,10 @@ const connection = mysql.createConnection({
     user: process.env.USER,
     password: process.env.PASSWORD,
     database: process.env.DB,
-    port: process.env.PORT
+    port: process.env.PORT,
+    connectionLimit: 15,
+    queueLimit: 30,
+    acquireTimeout: 1000000
 });
 
 // open the MySQL connection
